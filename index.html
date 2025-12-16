@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Loot_box_store – Phones, Watches & Accessories</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* ===== BASIC RESET ===== */
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:system-ui,-apple-system,Segoe UI,sans-serif;
+  background:#020617;
+  color:#e5e7eb;
+  line-height:1.6;
+}
+
+/* ===== BUTTONS ===== */
+.btn{
+  padding:12px 18px;
+  border-radius:999px;
+  border:none;
+  cursor:pointer;
+  font-size:14px;
+}
+.btn-primary{
+  background:#22c55e;
+  color:#022c22;
+  font-weight:700;
+}
+.btn-ghost{
+  background:#111827;
+  border:1px solid #374151;
+  color:#e5e7eb;
+}
+
+/* ===== EDIT MODE ===== */
+[data-editable].editing{
+  outline:2px dashed #22c55e;
+  background:#020617;
+}
+
+/* ===== HEADER ===== */
+header{
+  padding:16px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.logo{
+  font-size:20px;
+  font-weight:800;
+}
+.tagline{
+  font-size:12px;
+  color:#9ca3af;
+}
+
+/* ===== HERO ===== */
+.hero{
+  padding:20px;
+}
+.hero h1{
+  font-size:26px;
+  line-height:1.2;
+}
+.hero p{
+  margin-top:8px;
+  color:#9ca3af;
+}
+
+/* ===== SLIDER ===== */
+.slider{
+  display:flex;
+  gap:12px;
+  overflow-x:auto;
+  padding:16px;
+  scroll-snap-type:x mandatory;
+}
+.slide{
+  min-width:260px;
+  background:#0f172a;
+  border:1px solid #374151;
+  border-radius:18px;
+  padding:12px;
+  scroll-snap-align:start;
+}
+.slide img{
+  width:100%;
+  border-radius:12px;
+  margin-bottom:8px;
+}
+.price{
+  font-weight:700;
+  margin-top:4px;
+}
+
+/* ===== SECTION ===== */
+section{
+  margin-top:24px;
+}
+.section-title{
+  padding:0 16px;
+  font-size:18px;
+  font-weight:700;
+}
+
+/* ===== DISCLAIMER ===== */
+.disclaimer{
+  margin:24px 16px;
+  padding:12px;
+  background:#111827;
+  border:1px solid #7c2d12;
+  border-radius:14px;
+  font-size:12px;
+  color:#fde68a;
+}
+
+/* ===== WHATSAPP FLOAT ===== */
+.whatsapp-float{
+  position:fixed;
+  bottom:18px;
+  right:18px;
+  background:#22c55e;
+  color:#022c22;
+  padding:14px 18px;
+  border-radius:999px;
+  font-weight:700;
+  text-decoration:none;
+  box-shadow:0 10px 30px rgba(34,197,94,.5);
+  z-index:999;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  padding:16px;
+  font-size:12px;
+  color:#9ca3af;
+  text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div>
+    <div class="logo" data-editable data-key="brand">Loot_box_store</div>
+    <div class="tagline" data-editable data-key="city">Karbi Anglong</div>
+  </div>
+  <button id="editBtn" class="btn btn-ghost">Toggle Edit</button>
+</header>
+
+<section class="hero">
+  <h1 data-editable data-key="hero-title">
+    Refurbished Phones, Luxury Watches & Accessories at Lowest Prices
+  </h1>
+  <p data-editable data-key="hero-sub">
+    Open-box delivery • Warranty • COD • WhatsApp only support
+  </p>
+</section>
+
+<!-- PHONES SLIDER -->
+<section>
+  <div class="section-title">📱 Refurbished Phones</div>
+  <div class="slider">
+    <div class="slide">
+      <img src="https://via.placeholder.com/400x300" alt="">
+      <div data-editable>iPhone 13 (128GB)</div>
+      <div class="price" data-editable>₹37,999</div>
+      <div data-editable>3 months warranty • 7-day replacement</div>
+    </div>
+  </div>
+</section>
+
+<!-- WATCHES -->
+<section>
+  <div class="section-title">⌚ Luxury Watches</div>
+  <div class="slider">
+    <div class="slide">
+      <img src="https://via.placeholder.com/400x300" alt="">
+      <div data-editable>Luxury Watch with Box & Card</div>
+      <div class="price" data-editable>₹4,499</div>
+      <div data-editable>Premium gifting look</div>
+    </div>
+  </div>
+</section>
+
+<div class="disclaimer" data-editable>
+⚠️ Rolex Refund Policy: Refunds for Rolex watches are NOT issued in cash or bank transfer.
+Approved refund value can only be used within this website to purchase another Rolex or any other available watch by contacting us.
+</div>
+
+<!-- AIRPODS -->
+<section>
+  <div class="section-title">🎧 AirPods & Earbuds</div>
+  <div class="slider">
+    <div class="slide">
+      <img src="https://via.placeholder.com/400x300" alt="">
+      <div data-editable>AirPods Pro (Refurb)</div>
+      <div class="price" data-editable>₹1,999</div>
+      <div data-editable>Warranty + return available</div>
+    </div>
+  </div>
+</section>
+
+<div class="disclaimer" data-editable>
+⚠️ Earbuds / AirPods Refund Policy:
+Refund amount (if approved) can only be reused on this website for any other watch or accessory by contacting us.
+</div>
+
+<footer data-editable>
+WhatsApp only: +91 9101379604 • © Loot_box_store
+</footer>
+
+<a class="whatsapp-float"
+   href="https://wa.me/919101379604"
+   target="_blank">
+💬 Chat on WhatsApp
+</a>
+
+<script>
+const PIN="1234";
+let editing=false;
+const editBtn=document.getElementById("editBtn");
+
+editBtn.onclick=()=>{
+  if(!editing){
+    const pin=prompt("Enter edit PIN");
+    if(pin!==PIN) return alert("Wrong PIN");
+  }
+  editing=!editing;
+  document.querySelectorAll("[data-editable]").forEach(el=>{
+    el.contentEditable=editing;
+    el.classList.toggle("editing",editing);
+  });
+};
+</script>
+
+</body>
+  </html>
